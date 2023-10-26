@@ -1,0 +1,95 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+
+/* Add padding below "Pre-Available Cards" and above the footer */
+#card-section {
+    margin-bottom: 20px;
+}
+
+/* Display card notes in a new line for each clicked card */
+textarea#note-text {
+    white-space: pre-wrap;
+}
+/* Add styling for disabled card buttons */
+.card-button.disabled {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* Styling for card buttons */
+.card-button {
+    background-color: #333;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    color: white; /* Set the text color to white */
+}
+
+/* Style heart and diamond icons */
+.card-button[data-card*="Hearts"] {
+    color: red;
+}
+
+.card-button[data-card*="Diamonds"] {
+    color: red;
+}
+
+/* Additional styling for card buttons on hover (optional) */
+.card-button:hover {
+    background-color: #d0d0d0;
+}

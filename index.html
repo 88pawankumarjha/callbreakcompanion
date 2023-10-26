@@ -1,10 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Simple Web App</title>
+    <title>Call Break Card Notes</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>Hello, GitHub Pages!</h1>
-    <p>This is a simple web app hosted on GitHub Pages.</p>
+    <header>
+        <h1>Call Break Card Notes</h1>
+    </header>
+    <main>
+        <section id="round-section">
+            <h2>Round Management</h2>
+            <button id="new-round">New Round</button>
+        </section>
+    </main>
+    <section id="card-section">
+        <h2>Pre-Available Cards</h2>
+        <div class="card-rows">
+            <div class="card-row">
+                <button class="card-button" data-card="A of Spades">A ♠</button>
+                <button class="card-button" data-card="K of Spades">K ♠</button>
+            </div>
+            <div class="card-row">
+                <button class="card-button" data-card="A of Clubs">A ♣</button>
+                <button class="card-button" data-card="K of Clubs">K ♣</button>
+            </div>
+            <div class="card-row">
+                <button class="card-button" data-card="A of Hearts">A ♥</button>
+                <button class="card-button" data-card="K of Hearts">K ♥</button>
+                <!-- Add more card buttons as needed -->
+            </div>
+            <div class="card-row">
+                <button class="card-button" data-card="A of Diamonds">A ♦</button>
+                <button class="card-button" data-card="K of Diamonds">K ♦</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; <span id="current-year"></span> BoyLazy</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
