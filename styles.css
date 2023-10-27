@@ -19,7 +19,7 @@ h1 {
 
 main {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
 }
 
@@ -56,6 +56,8 @@ footer {
 /* Add padding below "Pre-Available Cards" and above the footer */
 #card-section {
     margin-bottom: 20px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Display card notes in a new line for each clicked card */
@@ -69,15 +71,51 @@ textarea#note-text {
     cursor: not-allowed;
 }
 
-/* Styling for card buttons */
+
+/* Restyle the card rows to maintain their grouping */
+.card-row {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Create four columns for cards */
+.card-columns {
+    display: flex;
+}
+
+.card-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Create compact card display with narrower columns */
+.compact-cards {
+    display: flex;
+}
+
+.compact-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px; /* Adjust the column width as needed */
+    max-width: 50px;
+    margin: 5px; /* Add space between columns */
+}
+
+/* Adjust the card-button styles for compactness */
 .card-button {
-    background-color: #333;
+    background-color: #fff;
+    border: 1px solid black;
     border-radius: 4px;
-    padding: 10px;
-    font-size: 16px;
-    margin: 5px;
+    padding: 5px;
+    font-size: 12px;
+    margin: 3px;
     cursor: pointer;
-    color: white; /* Set the text color to white */
+    color: black; /* Set the text color to black */
+    width: fit-content;
 }
 
 /* Style heart and diamond icons */
@@ -92,4 +130,8 @@ textarea#note-text {
 /* Additional styling for card buttons on hover (optional) */
 .card-button:hover {
     background-color: #d0d0d0;
+}
+
+.hidden {
+    display: none;
 }
