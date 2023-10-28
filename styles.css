@@ -175,11 +175,14 @@ textarea#note-text {
 }
 
 .reset-icon::before {
-    content: "\23FB"
+    content: "\23FB";
+    font-family: Arial, sans-serif; /* Fallback font */
+
 }
 
 .undo-icon::before {
-    content: "\21BA"
+    content: "\21BA";
+    font-family: Arial, sans-serif; /* Fallback font */
 }
 
 
