@@ -5,14 +5,18 @@ body {
     margin: 0;
     padding: 0;
     max-width: fit-content;
+    min-height: 100vh; 
 }
 
+/* Modify the header styles in your CSS */
+/* 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-}
+    width: 100px; 
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1; 
+} */
 
 h1 {
     font-size: 24px;
@@ -22,6 +26,7 @@ main {
     max-width: 600px;
     margin: 0;
     padding: 20px;
+    flex-grow: 1; 
 }
 
 h2 {
@@ -51,6 +56,7 @@ footer {
     color: #fff;
     padding: 10px 0;
     margin-top: 20px;
+    width: 100%
 }
 
 
@@ -164,4 +170,70 @@ textarea#note-text {
 .card-button[data-card*="Hearts"],
 .card-button[data-card*="Diamonds"] {
     min-width: 3em;
+}
+
+.reset-icon::before {
+    content: "\1F503"
+}
+
+.undo-icon::before {
+    content: "\21BA"
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#header-content {
+    display: flex;
+    align-items: center;
+}
+
+#header-content h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px; /* Increase the font size for the title */
+}
+
+#action-buttons {
+    margin-left: auto;
+    display: flex; /* Ensure the buttons are displayed in a row */
+    align-items: center; /* Vertically align buttons with icons */
+}
+
+.header-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex; /* Ensure button and icon are in a row */
+    align-items: center; /* Vertically align button and icon */
+}
+
+.header-button:hover {
+    background-color: #0056b3;
+}
+
+/* Define the custom icons */
+.icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
 }

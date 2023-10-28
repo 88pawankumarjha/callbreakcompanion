@@ -1,104 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Call Break Card Notes</title>
+    <title>Call Break Companion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Call Break Card Notes</h1>
-    </header>
-    <main>
-        <section id="round-section">
-            <h2>Round Management</h2>
-            <button id="new-round">New Round</button>
-            <button id="undo-button">Undo</button>
-        </section>
-    </main>
-    <section id="card-section">
-        <h2>Pre-Available Cards</h2>
-        <div class="card-columns compact-cards">
-            <div class="card-column compact-card">
-                <span class="card-count">13</span>
-
-                <!-- Spades -->
-                <button class="card-button" data-card="A of Spades">A ♠</button>
-                <button class="card-button" data-card="K of Spades">K ♠</button>
-                <button class="card-button" data-card="Q of Spades">Q ♠</button>
-                <button class="card-button" data-card="J of Spades">J ♠</button>
-                <button class="card-button" data-card="10 of Spades">10 ♠</button>
-                <button class="card-button" data-card="9 of Spades">9 ♠</button>
-                <button class="card-button" data-card="8 of Spades">8 ♠</button>
-                <button class="card-button" data-card="7 of Spades">7 ♠</button>
-                <button class="card-button" data-card="6 of Spades">6 ♠</button>
-                <button class="card-button" data-card="5 of Spades">5 ♠</button>
-                <button class="card-button" data-card="4 of Spades">4 ♠</button>
-                <button class="card-button" data-card="3 of Spades">3 ♠</button>
-                <button class="card-button" data-card="2 of Spades">2 ♠</button>
-            </div>
-
-            <!-- Hearts -->
-            <div class="card-column compact-card">
-                <span class="card-count">13</span>
-
-                <button class="card-button" data-card="A of Hearts">A ♥</button>
-                <button class="card-button" data-card="K of Hearts">K ♥</button>
-                <button class="card-button" data-card="Q of Hearts">Q ♥</button>
-                <button class="card-button" data-card="J of Hearts">J ♥</button>
-                <button class="card-button" data-card="10 of Hearts">10 ♥</button>
-                <button class="card-button" data-card="9 of Hearts">9 ♥</button>
-                <button class="card-button" data-card="8 of Hearts">8 ♥</button>
-                <button class="card-button" data-card="7 of Hearts">7 ♥</button>
-                <button class="card-button" data-card="6 of Hearts">6 ♥</button>
-                <button class="card-button" data-card="5 of Hearts">5 ♥</button>
-                <button class="card-button" data-card="4 of Hearts">4 ♥</button>
-                <button class="card-button" data-card="3 of Hearts">3 ♥</button>
-                <button class="card-button" data-card="2 of Hearts">2 ♥</button>
-            </div>
-
-            <div class="card-column compact-card">
-                <span class="card-count">13</span>
-
-                <!-- Clubs -->
-                <button class="card-button" data-card="A of Clubs">A ♣</button>
-                <button class="card-button" data-card="K of Clubs">K ♣</button>
-                <button class="card-button" data-card="Q of Clubs">Q ♣</button>
-                <button class="card-button" data-card="J of Clubs">J ♣</button>
-                <button class="card-button" data-card="10 of Clubs">10 ♣</button>
-                <button class="card-button" data-card="9 of Clubs">9 ♣</button>
-                <button class="card-button" data-card="8 of Clubs">8 ♣</button>
-                <button class="card-button" data-card="7 of Clubs">7 ♣</button>
-                <button class="card-button" data-card="6 of Clubs">6 ♣</button>
-                <button class="card-button" data-card="5 of Clubs">5 ♣</button>
-                <button class="card-button" data-card="4 of Clubs">4 ♣</button>
-                <button class="card-button" data-card="3 of Clubs">3 ♣</button>
-                <button class="card-button" data-card="2 of Clubs">2 ♣</button>
-            </div>
-            
-        
-            <!-- Diamonds -->
-            <div class="card-column compact-card">
-                <span class="card-count">13</span>
-
-                <button class="card-button" data-card="A of Diamonds">A ♦</button>
-                <button class="card-button" data-card="K of Diamonds">K ♦</button>
-                <button class="card-button" data-card="Q of Diamonds">Q ♦</button>
-                <button class="card-button" data-card="J of Diamonds">J ♦</button>
-                <button class="card-button" data-card="10 of Diamonds">10 ♦</button>
-                <button class="card-button" data-card="9 of Diamonds">9 ♦</button>
-                <button class="card-button" data-card="8 of Diamonds">8 ♦</button>
-                <button class="card-button" data-card="7 of Diamonds">7 ♦</button>
-                <button class="card-button" data-card="6 of Diamonds">6 ♦</button>
-                <button class="card-button" data-card="5 of Diamonds">5 ♦</button>
-                <button class="card-button" data-card="4 of Diamonds">4 ♦</button>
-                <button class="card-button" data-card="3 of Diamonds">3 ♦</button>
-                <button class="card-button" data-card="2 of Diamonds">2 ♦</button>
+        <div id="header-content">
+            <h4>Call Break Companion</h4>
+            <div id="action-buttons">
+                <button id="new-round" class="header-button">
+                    <span class="icon reset-icon"></span>
+                </button>
+                <button id="undo-button" class="header-button">
+                    <span class="icon undo-icon"></span>
+                </button>
             </div>
         </div>
-    </section>
+    </header>
+    <main>
+        <section id="card-section">
+            <div class="card-columns compact-cards">
+                <div class="card-column compact-card">
+                    <span class="card-count">13</span>
     
+                    <!-- Spades -->
+                    <button class="card-button" data-card="A of Spades">A ♠</button>
+                    <button class="card-button" data-card="K of Spades">K ♠</button>
+                    <button class="card-button" data-card="Q of Spades">Q ♠</button>
+                    <button class="card-button" data-card="J of Spades">J ♠</button>
+                    <button class="card-button" data-card="10 of Spades">10 ♠</button>
+                    <button class="card-button" data-card="9 of Spades">9 ♠</button>
+                    <button class="card-button" data-card="8 of Spades">8 ♠</button>
+                    <button class="card-button" data-card="7 of Spades">7 ♠</button>
+                    <button class="card-button" data-card="6 of Spades">6 ♠</button>
+                    <button class="card-button" data-card="5 of Spades">5 ♠</button>
+                    <button class="card-button" data-card="4 of Spades">4 ♠</button>
+                    <button class="card-button" data-card="3 of Spades">3 ♠</button>
+                    <button class="card-button" data-card="2 of Spades">2 ♠</button>
+                </div>
     
+                <!-- Hearts -->
+                <div class="card-column compact-card">
+                    <span class="card-count">13</span>
     
+                    <button class="card-button" data-card="A of Hearts">A ♥</button>
+                    <button class="card-button" data-card="K of Hearts">K ♥</button>
+                    <button class="card-button" data-card="Q of Hearts">Q ♥</button>
+                    <button class="card-button" data-card="J of Hearts">J ♥</button>
+                    <button class="card-button" data-card="10 of Hearts">10 ♥</button>
+                    <button class="card-button" data-card="9 of Hearts">9 ♥</button>
+                    <button class="card-button" data-card="8 of Hearts">8 ♥</button>
+                    <button class="card-button" data-card="7 of Hearts">7 ♥</button>
+                    <button class="card-button" data-card="6 of Hearts">6 ♥</button>
+                    <button class="card-button" data-card="5 of Hearts">5 ♥</button>
+                    <button class="card-button" data-card="4 of Hearts">4 ♥</button>
+                    <button class="card-button" data-card="3 of Hearts">3 ♥</button>
+                    <button class="card-button" data-card="2 of Hearts">2 ♥</button>
+                </div>
+    
+                <div class="card-column compact-card">
+                    <span class="card-count">13</span>
+    
+                    <!-- Clubs -->
+                    <button class="card-button" data-card="A of Clubs">A ♣</button>
+                    <button class="card-button" data-card="K of Clubs">K ♣</button>
+                    <button class="card-button" data-card="Q of Clubs">Q ♣</button>
+                    <button class="card-button" data-card="J of Clubs">J ♣</button>
+                    <button class="card-button" data-card="10 of Clubs">10 ♣</button>
+                    <button class="card-button" data-card="9 of Clubs">9 ♣</button>
+                    <button class="card-button" data-card="8 of Clubs">8 ♣</button>
+                    <button class="card-button" data-card="7 of Clubs">7 ♣</button>
+                    <button class="card-button" data-card="6 of Clubs">6 ♣</button>
+                    <button class="card-button" data-card="5 of Clubs">5 ♣</button>
+                    <button class="card-button" data-card="4 of Clubs">4 ♣</button>
+                    <button class="card-button" data-card="3 of Clubs">3 ♣</button>
+                    <button class="card-button" data-card="2 of Clubs">2 ♣</button>
+                </div>
+                
+            
+                <!-- Diamonds -->
+                <div class="card-column compact-card">
+                    <span class="card-count">13</span>
+    
+                    <button class="card-button" data-card="A of Diamonds">A ♦</button>
+                    <button class="card-button" data-card="K of Diamonds">K ♦</button>
+                    <button class="card-button" data-card="Q of Diamonds">Q ♦</button>
+                    <button class="card-button" data-card="J of Diamonds">J ♦</button>
+                    <button class="card-button" data-card="10 of Diamonds">10 ♦</button>
+                    <button class="card-button" data-card="9 of Diamonds">9 ♦</button>
+                    <button class="card-button" data-card="8 of Diamonds">8 ♦</button>
+                    <button class="card-button" data-card="7 of Diamonds">7 ♦</button>
+                    <button class="card-button" data-card="6 of Diamonds">6 ♦</button>
+                    <button class="card-button" data-card="5 of Diamonds">5 ♦</button>
+                    <button class="card-button" data-card="4 of Diamonds">4 ♦</button>
+                    <button class="card-button" data-card="3 of Diamonds">3 ♦</button>
+                    <button class="card-button" data-card="2 of Diamonds">2 ♦</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
     <footer>
         <p>&copy; <span id="current-year"></span> BoyLazy</p>
     </footer>
