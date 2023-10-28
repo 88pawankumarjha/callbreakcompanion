@@ -69,11 +69,14 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     newRoundButton.addEventListener("click", function() {
-        cardColumns.forEach(column => {
+        
+        cardCountElements.forEach(cardCount => {
             // Reset the border color to "no border" for all columns
-            column.classList.remove("selected-orange-column");
-            column.classList.remove("selected-red-column");
-    
+            cardCount.classList.remove("selected-orange-column");
+            cardCount.classList.remove("selected-red-column");
+        });
+        cardColumns.forEach(column => {
+            
             const buttonsInColumn = column.querySelectorAll(".card-button");
             buttonsInColumn.forEach(button => {
                 if (button.classList.contains("hidden")) {
@@ -92,21 +95,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cardCountElements.forEach(cardCount => {
         let clickCount = 0;
-        const column = cardCount.closest(".compact-card");
+        // const column = cardCount.closest(".compact-card");
+        const cardCountElementsBox = cardCount.closest(".card-count");
 
         cardCount.addEventListener("click", function() {
             clickCount++;
             if (clickCount % 3 === 1) {
                 // First click: Change border to orange
-                column.classList.add("selected-orange-column");
-                column.classList.remove("selected-red-column");
+                cardCountElementsBox.classList.add("selected-orange-column");
+                cardCountElementsBox.classList.remove("selected-red-column");
             } else if (clickCount % 3 === 2) {
                 // Second click: Change border to red
-                column.classList.remove("selected-orange-column");
-                column.classList.add("selected-red-column");
+                cardCountElementsBox.classList.remove("selected-orange-column");
+                cardCountElementsBox.classList.add("selected-red-column");
             } else {
                 // Third click: Remove border
-                column.classList.remove("selected-orange-column", "selected-red-column");
+                cardCountElementsBox.classList.remove("selected-orange-column", "selected-red-column");
                 clickCount = 0;
             }
         });

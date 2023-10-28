@@ -9,13 +9,13 @@
 <body>
     <header>
         <div id="header-content">
-            <h4>Call Break Companion</h4>
+            <h4 style="margin: 0; padding: 0; margin-right: 50px;">Call Break Companion</h4>
             <div id="action-buttons">
                 <button id="new-round" class="header-button">
-                    <span class="icon reset-icon"></span>
+                    <span title="Reset" class="icon reset-icon"></span>
                 </button>
                 <button id="undo-button" class="header-button">
-                    <span class="icon undo-icon"></span>
+                    <span title="Undo" class="icon undo-icon"></span>
                 </button>
             </div>
         </div>
@@ -24,8 +24,8 @@
         <section id="card-section">
             <div class="card-columns compact-cards">
                 <div class="card-column compact-card">
-                    ♠
-                    <span class="card-count">13</span>
+                    <span>♠</span>
+                    <button class="card-count">13</button>
     
                     <!-- Spades -->
                     <button class="card-button" data-card="A of Spades">A</button>
@@ -45,8 +45,8 @@
     
                 <!-- Hearts -->
                 <div class="card-column compact-card">
-                    ♥
-                    <span class="card-count">13</span>
+                    <span class="red">♥</span>
+                    <button class="card-count">13</button>
     
                     <button class="card-button" data-card="A of Hearts">A</button>
                     <button class="card-button" data-card="K of Hearts">K</button>
@@ -64,8 +64,8 @@
                 </div>
     
                 <div class="card-column compact-card">
-                    ♣
-                    <span class="card-count">13</span>
+                    <span>♣</span>
+                    <button class="card-count">13</button>
     
                     <!-- Clubs -->
                     <button class="card-button" data-card="A of Clubs">A</button>
@@ -86,8 +86,8 @@
             
                 <!-- Diamonds -->
                 <div class="card-column compact-card">
-                    ♦
-                    <span class="card-count">13</span>
+                    <span class="red">♦</span>
+                    <button class="card-count">13</button>
     
                     <button class="card-button" data-card="A of Diamonds">A</button>
                     <button class="card-button" data-card="K of Diamonds">K</button>

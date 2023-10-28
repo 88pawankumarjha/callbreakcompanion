@@ -118,9 +118,9 @@ textarea#note-text {
     background-color: #fff;
     border: 1px solid black;
     font-weight: 600;
-    border-radius: 8px;
-    font-size: 20px; /* Adjust the font size as needed */
-    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 12px 0;
     margin: 3px;
     cursor: pointer;
     color: #000;
@@ -146,43 +146,45 @@ textarea#note-text {
 
 /* Add these styles to your existing CSS */
 .card-count {
-    background-color: #333;
+    background-color: #007bff;
     color: white;
-    border: 2px solid #333;
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
     font-weight: bold;
     user-select: none;
     margin: inherit;
+    min-width: 3em;
 }
 
 .selected-orange-column {
-    border: 1px dashed orange;
+    background-color: orange
 }
 
 .selected-red-column {
-    border: 1px solid red;
+    background-color: red;
+}
+
+.red {
+    color: red
 }
 
 .card-button[data-card*="Spades"],
 .card-button[data-card*="Clubs"],
 .card-button[data-card*="Hearts"],
 .card-button[data-card*="Diamonds"] {
-    min-width: 3em;
+    min-width: 35px;
     min-height: calc((100vh - 600px) / 13);
     /* max-height: calc((100vh - 600px) / 13); */
 }
 
 .reset-icon::before {
-    content: "\23FB";
-    font-family: Arial, sans-serif; /* Fallback font */
+    content: "\25B6";
 
 }
 
 .undo-icon::before {
     content: "\21BA";
-    font-family: Arial, sans-serif; /* Fallback font */
 }
 
 
