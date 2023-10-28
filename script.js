@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     cardButtons.forEach(button => {
         button.addEventListener("click", function() {
-            const cardName = this.getAttribute("data-card");
             const isHidden = this.classList.contains("hidden");
             const column = this.closest(".compact-card");
 

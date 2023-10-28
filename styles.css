@@ -1,32 +1,22 @@
 /* styles.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Cardo", serif;
     margin: 0;
     padding: 0;
-    max-width: fit-content;
     min-height: 100vh; 
 }
-
-/* Modify the header styles in your CSS */
-/* 
-header {
-    width: 100px; 
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1; 
-} */
 
 h1 {
     font-size: 24px;
 }
 
 main {
-    max-width: 600px;
+    max-width: 100vw;
     margin: 0;
     padding: 20px;
     flex-grow: 1; 
+    min-height: calc(100vh - 200px); /* Adjust as needed for the header and footer height */
 }
 
 h2 {
@@ -51,20 +41,28 @@ button {
 }
 
 footer {
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    margin-top: 20px;
-    width: 100%
+    text-align: right; /* Align text to the right */
+    background-color: transparent; /* Transparent background */
+    color: #555; /* Set your desired text color */
+    font-size: 10px; /* Adjust the font size as needed */
+    padding: 5px; /* Add some padding for spacing */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
 }
 
 
 /* Add padding below "Pre-Available Cards" and above the footer */
+
 #card-section {
-    margin-bottom: 20px;
-    margin: 0 auto;
+    margin: 0;
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 220px); /* Adjust as needed for the header and footer height */
 }
 
 /* Display card notes in a new line for each clicked card */
@@ -89,6 +87,7 @@ textarea#note-text {
 .card-columns {
     display: flex;
     gap: 4vw;
+    min-height: calc(100vh - 200px);
 }
 
 .card-column {
@@ -101,6 +100,7 @@ textarea#note-text {
 /* Create compact card display with narrower columns */
 .compact-cards {
     display: flex;
+    min-height: calc(100vh - 200px); /* Adjust as needed for the header and footer height */
 }
 
 .compact-card {
@@ -117,23 +117,23 @@ textarea#note-text {
 .card-button {
     background-color: #fff;
     border: 1px solid black;
-    border-radius: 4px;
-    padding: 5px;
-    font-size: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: 20px; /* Adjust the font size as needed */
+    padding: 8px 16px;
     margin: 3px;
     cursor: pointer;
-    color: black; /* Set the text color to black */
-    width: fit-content;
+    color: #000;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(180deg, #FFF, #EEE);
 }
 
-/* Style heart and diamond icons */
-.card-button[data-card*="Hearts"] {
-    color: red;
-}
-
+.card-button[data-card*="Hearts"],
 .card-button[data-card*="Diamonds"] {
     color: red;
 }
+
 
 /* Additional styling for card buttons on hover (optional) */
 .card-button:hover {
@@ -170,10 +170,12 @@ textarea#note-text {
 .card-button[data-card*="Hearts"],
 .card-button[data-card*="Diamonds"] {
     min-width: 3em;
+    min-height: calc((100vh - 600px) / 13);
+    /* max-height: calc((100vh - 600px) / 13); */
 }
 
 .reset-icon::before {
-    content: "\1F503"
+    content: "\23FB"
 }
 
 .undo-icon::before {
@@ -188,6 +190,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100vw;
 }
 
 #header-content {
