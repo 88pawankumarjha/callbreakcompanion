@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const cardButtons = document.querySelectorAll(".card-button");
     const newRoundButton = document.getElementById("new-round");
     const undoButton = document.getElementById("undo-button");
+
+    const cardColumns = document.querySelectorAll(".card-column");
+    const cardCountElements = document.querySelectorAll(".card-count");
+
+
     const visibilityStack = [];
 
     // Initialize card counts and visibilityStack
@@ -65,21 +70,49 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     newRoundButton.addEventListener("click", function() {
-        // Re-enable and show previously hidden cards
-        cardButtons.forEach(button => {
-            const column = button.closest(".compact-card");
-            if (button.classList.contains("hidden")) {
-                button.classList.remove("hidden");
-                button.disabled = false;
-            }
+        cardColumns.forEach(column => {
+            // Reset the border color to "no border" for all columns
+            column.classList.remove("selected-orange-column");
+            column.classList.remove("selected-red-column");
+    
+            const buttonsInColumn = column.querySelectorAll(".card-button");
+            buttonsInColumn.forEach(button => {
+                if (button.classList.contains("hidden")) {
+                    button.classList.remove("hidden");
+                    button.disabled = false;
+                }
+            });
             updateCardCount(column, 13);
         });
-
+    
         // Clear the undo stack
         visibilityStack.length = 0;
     });
-
     
+
+
+    cardCountElements.forEach(cardCount => {
+        let clickCount = 0;
+        const column = cardCount.closest(".compact-card");
+
+        cardCount.addEventListener("click", function() {
+            clickCount++;
+            if (clickCount % 3 === 1) {
+                // First click: Change border to orange
+                column.classList.add("selected-orange-column");
+                column.classList.remove("selected-red-column");
+            } else if (clickCount % 3 === 2) {
+                // Second click: Change border to red
+                column.classList.remove("selected-orange-column");
+                column.classList.add("selected-red-column");
+            } else {
+                // Third click: Remove border
+                column.classList.remove("selected-orange-column", "selected-red-column");
+                clickCount = 0;
+            }
+        });
+    });
+
 
     // Your existing code for other functionalities (if any)
 });

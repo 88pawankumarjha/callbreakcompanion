@@ -4,6 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    max-width: fit-content;
 }
 
 header {
@@ -81,6 +82,7 @@ textarea#note-text {
 /* Create four columns for cards */
 .card-columns {
     display: flex;
+    gap: 4vw;
 }
 
 .card-column {
@@ -134,4 +136,32 @@ textarea#note-text {
 
 .hidden {
     display: none;
+}
+
+/* Add these styles to your existing CSS */
+.card-count {
+    background-color: #333;
+    color: white;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    margin: inherit;
+}
+
+.selected-orange-column {
+    border: 1px dashed orange;
+}
+
+.selected-red-column {
+    border: 1px solid red;
+}
+
+.card-button[data-card*="Spades"],
+.card-button[data-card*="Clubs"],
+.card-button[data-card*="Hearts"],
+.card-button[data-card*="Diamonds"] {
+    min-width: 3em;
 }
